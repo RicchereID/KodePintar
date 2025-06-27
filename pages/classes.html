@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas Programming - KodePintar</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/classes.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">KodePintar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="classes.html" class="active">Kelas</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="login.html" class="btn-login">Masuk</a></li>
+                    <li><a href="register.html" class="btn-register">Daftar</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="classes-hero">
+        <div class="container">
+            <h1>Kelas Programming</h1>
+            <p>Pilih kelas yang sesuai dengan tujuan karir Anda</p>
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Semua Kelas</button>
+                <button class="filter-btn" data-filter="beginner">Pemula</button>
+                <button class="filter-btn" data-filter="intermediate">Menengah</button>
+                <button class="filter-btn" data-filter="advanced">Lanjutan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section class="classes-section">
+        <div class="container">
+            <div class="classes-grid">
+                <!-- Basic Programming -->
+                <div class="class-card" id="basic" data-level="beginner">
+                    <div class="class-image">
+                        <img src="../images/coding.jpg" alt="Basic Programming">
+                        <div class="class-level">Pemula</div>
+                    </div>
+                    <div class="class-content">
+                        <h3>Basic Programming</h3>
+                        <p>Kelas dasar untuk pemula yang ingin memulai karir di dunia programming</p>
+                        <div class="class-info">
+                            <span class="duration">⏱️ 3 Bulan</span>
+                            <span class="students">👥 1,250 Siswa</span>
+                            <span class="rating">⭐ 4.8 (324 review)</span>
+                        </div>
+                        <div class="class-price">
+                            <span class="price-old">Rp 2.500.000</span>
+                            <span class="price-new">Rp 1.500.000</span>
+                        </div>
+                        <ul class="class-features">
+                            <li>✓ HTML, CSS & JavaScript Fundamental</li>
+                            <li>✓ Logika Pemrograman</li>
+                            <li>✓ Git & GitHub</li>
+                            <li>✓ 5 Project Portfolio</li>
+                            <li>✓ Sertifikat Resmi</li>
+                            <li>✓ Job Placement Assistance</li>
+                        </ul>
+                        <div class="class-actions">
+                            <button class="btn btn-primary enroll-btn" data-class="basic">Daftar Kelas</button>
+                            <button class="btn btn-outline preview-btn" data-preview="basic">Preview Gratis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Development -->
+                <div class="class-card featured" id="frontend" data-level="intermediate">
+                    <div class="featured-badge">TERPOPULER</div>
+                    <div class="class-image">
+                        <img src="../images/coding.jpg" alt="Frontend Development">
+                        <div class="class-level">Menengah</div>
+                    </div>
+                    <div class="class-content">
+                        <h3>Frontend Development</h3>
+                        <p>Kelas untuk mengembangkan kemampuan membuat antarmuka website yang menarik dan interaktif</p>
+                        <div class="class-info">
+                            <span class="duration">⏱️ 4 Bulan</span>
+                            <span class="students">👥 2,100 Siswa</span>
+                            <span class="rating">⭐ 4.9 (567 review)</span>
+                        </div>
+                        <div class="class-price">
+                            <span class="price-old">Rp 4.000.000</span>
+                            <span class="price-new">Rp 2.500.000</span>
+                        </div>
+                        <ul class="class-features">
+                            <li>✓ React.js & Next.js</li>
+                            <li>✓ Vue.js & Nuxt.js</li>
+                            <li>✓ Responsive Design & Mobile First</li>
+                            <li>✓ API Integration & State Management</li>
+                            <li>✓ 10 Project Portfolio</li>
+                            <li>✓ Performance Optimization</li>
+                        </ul>
+                        <div class="class-actions">
+                            <button class="btn btn-primary enroll-btn" data-class="frontend">Daftar Kelas</button>
+                            <button class="btn btn-outline preview-btn" data-preview="frontend">Preview Gratis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Development -->
+                <div class="class-card" id="backend" data-level="intermediate">
+                    <div class="class-image">
+                        <img src="../images/coding.jpg" alt="Backend Development">
+                        <div class="class-level">Menengah</div>
+                    </div>
+                    <div class="class-content">
+                        <h3>Backend Development</h3>
+                        <p>Kelas untuk mempelajari pengembangan server, database, dan API</p>
+                        <div class="class-info">
+                            <span class="duration">⏱️ 5 Bulan</span>
+                            <span class="students">👥 1,800 Siswa</span>
+                            <span class="rating">⭐ 4.7 (445 review)</span>
+                        </div>
+                        <div class="class-price">
+                            <span class="price-old">Rp 4.500.000</span>
+                            <span class="price-new">Rp 3.000.000</span>
+                        </div>
+                        <ul class="class-features">
+                            <li>✓ Node.js & Express.js</li>
+                            <li>✓ PHP & Laravel Framework</li>
+                            <li>✓ Database (MySQL, MongoDB, PostgreSQL)</li>
+                            <li>✓ RESTful API & GraphQL</li>
+                            <li>✓ Cloud Deployment (AWS, GCP)</li>
+                            <li>✓ Microservices Architecture</li>
+                        </ul>
+                        <div class="class-actions">
+                            <button class="btn btn-primary enroll-btn" data-class="backend">Daftar Kelas</button>
+                            <button class="btn btn-outline preview-btn" data-preview="backend">Preview Gratis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Stack Development -->
+                <div class="class-card" id="fullstack" data-level="advanced">
+                    <div class="class-image">
+                        <img src="../images/coding.jpg" alt="Full Stack Development">
+                        <div class="class-level">Lanjutan</div>
+                    </div>
+                    <div class="class-content">
+                        <h3>Full Stack Development</h3>
+                        <p>Kelas lengkap untuk menjadi developer yang menguasai frontend dan backend</p>
+                        <div class="class-info">
+                            <span class="duration">⏱️ 6 Bulan</span>
+                            <span class="students">👥 950 Siswa</span>
+                            <span class="rating">⭐ 4.9 (234 review)</span>
+                        </div>
+                        <div class="class-price">
+                            <span class="price-old">Rp 6.000.000</span>
+                            <span class="price-new">Rp 4.000.000</span>
+                        </div>
+                        <ul class="class-features">
+                            <li>✓ MERN Stack (MongoDB, Express, React, Node)</li>
+                            <li>✓ LAMP Stack (Linux, Apache, MySQL, PHP)</li>
+                            <li>✓ DevOps & CI/CD</li>
+                            <li>✓ Testing & Quality Assurance</li>
+                            <li>✓ 15 Project Portfolio</li>
+                            <li>✓ Capstone Project</li>
+                        </ul>
+                        <div class="class-actions">
+                            <button class="btn btn-primary enroll-btn" data-class="fullstack">Daftar Kelas</button>
+                            <button class="btn btn-outline preview-btn" data-preview="fullstack">Preview Gratis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="class-card" id="mobile" data-level="intermediate">
+                    <div class="class-image">
+                        <img src="../images/coding.jpg" alt="Mobile Development">
+                        <div class="class-level">Menengah</div>
+                    </div>
+                    <div class="class-content">
+                        <h3>Mobile App Development</h3>
+                        <p>Kelas untuk membuat aplikasi mobile Android dan iOS</p>
+                        <div class="class-info">
+                            <span class="duration">⏱️ 4 Bulan</span>
+                            <span class="students">👥 1,200 Siswa</span>
+                            <span class="rating">⭐ 4.6 (298 review)</span>
+                        </div>
+                        <div class="class-price">
+                            <span class="price-old">Rp 3.500.000</span>
+                            <span class="price-new">Rp 2.200.000</span>
+                        </div>
+                        <ul class="class-features">
+                            <li>✓ React Native</li>
+                            <li>✓ Flutter & Dart</li>
+                            <li>✓ Native Android (Kotlin)</li>
+                            <li>✓ Native iOS (Swift)</li>
+                            <li>✓ App Store Deployment</li>
+                            <li>✓ Push Notifications & Analytics</li>
+                        </ul>
+                        <div class="class-actions">
+                            <button class="btn btn-primary enroll-btn" data-class="mobile">Daftar Kelas</button>
+                            <button class="btn btn-outline preview-btn" data-preview="mobile">Preview Gratis</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Science -->
+                <div class="class-card" id="data" data-level="advanced">
+                    <div class="class-image">
+                        <img src="../images/coding.jpg" alt="Data Science">
+                        <div class="class-level">Lanjutan</div>
+                    </div>
+                    <div class="class-content">
+                        <h3>Data Science & AI</h3>
+                        <p>Kelas untuk mempelajari analisis data dan kecerdasan buatan</p>
+                        <div class="class-info">
+                            <span class="duration">⏱️ 5 Bulan</span>
+                            <span class="students">👥 750 Siswa</span>
+                            <span class="rating">⭐ 4.8 (156 review)</span>
+                        </div>
+                        <div class="class-price">
+                            <span class="price-old">Rp 5.000.000</span>
+                            <span class="price-new">Rp 3.500.000</span>
+                        </div>
+                        <ul class="class-features">
+                            <li>✓ Python for Data Science</li>
+                            <li>✓ Machine Learning & Deep Learning</li>
+                            <li>✓ Data Visualization</li>
+                            <li>✓ Big Data Processing</li>
+                            <li>✓ AI Model Deployment</li>
+                            <li>✓ Real-world Data Projects</li>
+                        </ul>
+                        <div class="class-actions">
+                            <button class="btn btn-primary enroll-btn" data-class="data">Daftar Kelas</button>
+                            <button class="btn btn-outline preview-btn" data-preview="data">Preview Gratis</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan Umum</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah cocok untuk pemula yang tidak punya background IT?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, sangat cocok! Kami memiliki kelas Basic Programming yang dirancang khusus untuk pemula tanpa background IT. Materi dimulai dari dasar-dasar programming dengan penjelasan yang mudah dipahami.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa lama waktu belajar untuk bisa kerja sebagai programmer?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tergantung kelas yang diambil. Untuk Basic Programming (3 bulan), Anda sudah bisa mulai apply pekerjaan junior. Untuk hasil optimal, kami rekomendasikan Full Stack Development (6 bulan).</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah ada jaminan kerja setelah lulus?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami menyediakan job placement assistance dan memiliki partnership dengan 100+ perusahaan teknologi. Namun, kesuksesan juga tergantung pada dedikasi dan usaha Anda dalam belajar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KodePintar</h3>
+                    <p>Platform belajar coding terbaik untuk membangun karir di bidang teknologi dengan mentor profesional dan kurikulum yang selalu update.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kelas</h4>
+                    <ul>
+                        <li><a href="#basic">Basic Programming</a></li>
+                        <li><a href="#frontend">Frontend Development</a></li>
+                        <li><a href="#backend">Backend Development</a></li>
+                        <li><a href="#mobile">Mobile App Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 info@kodepintar.com</li>
+                        <li>📞 (021) 8765-4321</li>
+                        <li>📍 Jakarta Selatan, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KodePintar. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Preview Kelas</h2>
+            <div id="modalBody">
+                <p>Loading preview...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/classes.js"></script>
+</body>
+</html>

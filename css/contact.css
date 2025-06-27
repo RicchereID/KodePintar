@@ -1,0 +1,301 @@
+/* ========================================
+   CSS KHUSUS HALAMAN KONTAK
+   ======================================== */
+
+/* ========================================
+   CONTACT HERO - HEADER HALAMAN KONTAK
+   ======================================== */
+
+/* Hero section dengan gradient background */
+.contact-hero {
+  background: linear-gradient(135deg, #6200ee 0%, #03dac6 100%);
+  color: white;
+  padding: 120px 0 60px;
+  margin-top: 70px; /* Offset untuk fixed header */
+  text-align: center;
+}
+
+/* Judul utama halaman kontak */
+.contact-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Deskripsi halaman kontak */
+.contact-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ========================================
+     CONTACT SECTION - BAGIAN KONTAK UTAMA
+     ======================================== */
+
+/* Section utama kontak */
+.contact-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+/* Grid layout 2 kolom untuk kontak */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Judul section kontak */
+.contact-info h2,
+.contact-form h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+     CONTACT INFO - INFORMASI KONTAK
+     ======================================== */
+
+/* Item informasi kontak */
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+/* Icon kontak - Emoji besar */
+.contact-icon {
+  font-size: 2rem;
+  color: #6200ee;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+/* Judul item kontak */
+.contact-item h3 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Detail kontak */
+.contact-item p {
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+/* ========================================
+     CONTACT FORM - FORMULIR KONTAK
+     ======================================== */
+
+/* Container form kontak */
+.contact-form {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group untuk contact form */
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Label form kontak */
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Input fields form kontak */
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+/* Focus state untuk form kontak */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #6200ee;
+}
+
+/* Textarea dengan resize vertical */
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* ========================================
+     FAQ SECTION - PERTANYAAN UMUM
+     ======================================== */
+
+/* Section FAQ */
+.faq-section {
+  padding: 80px 0;
+  background: white;
+}
+
+/* Container FAQ - Centered dan limited width */
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Item FAQ individual */
+.faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* Pertanyaan FAQ - Clickable */
+.faq-question {
+  padding: 1.5rem;
+  background: #f9fafb;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect untuk FAQ question */
+.faq-question:hover {
+  background: #f3f4f6;
+}
+
+/* Judul pertanyaan FAQ */
+.faq-question h3 {
+  font-size: 1.1rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Toggle icon FAQ (+ / -) */
+.faq-toggle {
+  font-size: 1.5rem;
+  color: #6200ee;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate toggle icon when active */
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+/* Jawaban FAQ - Collapsible */
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Show FAQ answer when active */
+.faq-item.active .faq-answer {
+  padding: 1.5rem;
+  max-height: 200px;
+}
+
+/* Text jawaban FAQ */
+.faq-answer p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ========================================
+     RESPONSIVE DESIGN - MOBILE DAN TABLET
+     ======================================== */
+
+/* Tablet styling */
+@media (max-width: 768px) {
+  /* Smaller contact hero title */
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Single column contact layout */
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Reduce contact form padding */
+  .contact-form {
+    padding: 2rem;
+  }
+
+  /* Smaller contact item gap */
+  .contact-item {
+    gap: 0.75rem;
+  }
+
+  /* Smaller contact icon */
+  .contact-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile phone styling */
+@media (max-width: 480px) {
+  /* Reduce hero padding */
+  .contact-hero {
+    padding: 100px 0 40px;
+  }
+
+  /* Reduce section padding */
+  .contact-section,
+  .faq-section {
+    padding: 60px 0;
+  }
+
+  /* Further reduce form padding */
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  /* Smaller section titles */
+  .contact-info h2,
+  .contact-form h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* ========================================
+     FORM SUCCESS/ERROR STATES - STATUS FORM
+     ======================================== */
+
+/* Success message untuk form */
+.form-success {
+  background: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid #c3e6cb;
+}
+
+/* Error message untuk form */
+.form-error {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - KodePintar</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">KodePintar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="classes.html">Kelas</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html" class="active">Kontak</a></li>
+                    <li><a href="login.html" class="btn-login">Masuk</a></li>
+                    <li><a href="register.html" class="btn-register">Daftar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <p>Ada pertanyaan? Tim kami siap membantu Anda</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Informasi Kontak</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@kodepintar.com</p>
+                            <p>support@kodepintar.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h3>Telepon</h3>
+                            <p>(021) 8765-4321</p>
+                            <p>WhatsApp: +62 812-3456-7890</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h3>Alamat</h3>
+                            <p>Jl. Sudirman No. 123</p>
+                            <p>Jakarta Selatan 12190</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h3>Jam Operasional</h3>
+                            <p>Senin - Jumat: 09:00 - 18:00</p>
+                            <p>Sabtu: 09:00 - 15:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Kirim Pesan</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Pilih subjek</option>
+                                <option value="info">Informasi Kelas</option>
+                                <option value="technical">Bantuan Teknis</option>
+                                <option value="payment">Pembayaran</option>
+                                <option value="partnership">Kerjasama</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara mendaftar kelas?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anda bisa mendaftar melalui website dengan mengklik tombol "Daftar" pada kelas yang diminati, atau hubungi tim kami untuk konsultasi gratis.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah ada garansi uang kembali?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, kami memberikan garansi uang kembali 100% dalam 7 hari pertama jika Anda tidak puas dengan kelas yang diambil.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana sistem pembayaran?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami menerima pembayaran melalui transfer bank, e-wallet (OVO, GoPay, DANA), dan kartu kredit. Tersedia juga opsi cicilan 0%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KodePintar</h3>
+                    <p>Platform belajar coding terbaik untuk membangun karir di bidang teknologi.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 info@kodepintar.com</li>
+                        <li>📞 (021) 8765-4321</li>
+                        <li>📍 Jakarta Selatan, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KodePintar. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+</html>

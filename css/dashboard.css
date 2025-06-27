@@ -1,0 +1,519 @@
+/* ========================================
+   CSS KHUSUS HALAMAN DASHBOARD SISWA
+   ======================================== */
+
+/* ========================================
+   DASHBOARD MAIN - CONTAINER UTAMA
+   ======================================== */
+
+/* Container utama dashboard */
+.dashboard-main {
+  padding: 120px 0 80px;
+  margin-top: 70px; /* Offset untuk fixed header */
+  background: #f8fafc;
+  min-height: calc(100vh - 70px);
+}
+
+/* ========================================
+   WELCOME SECTION - BAGIAN SAMBUTAN
+   ======================================== */
+
+/* Section sambutan untuk user */
+.welcome-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Judul sambutan dengan nama user */
+.welcome-section h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+/* Deskripsi sambutan */
+.welcome-section p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* ========================================
+   STATS SECTION - STATISTIK PEMBELAJARAN
+   ======================================== */
+
+/* Section untuk statistik user */
+.stats-section {
+  margin-bottom: 4rem;
+}
+
+/* Grid layout untuk card statistik */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Card statistik individual */
+.stat-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect untuk stat card */
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon statistik */
+.stat-icon {
+  font-size: 3rem;
+  color: #6200ee;
+}
+
+/* Angka statistik */
+.stat-info h3 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+/* Label statistik */
+.stat-info p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   MY CLASSES SECTION - KELAS SAYA
+   ======================================== */
+
+/* Section kelas yang diikuti user */
+.my-classes-section {
+  margin-bottom: 4rem;
+}
+
+/* Judul section kelas saya */
+.my-classes-section h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout untuk kelas yang diikuti */
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Card kelas yang diikuti */
+.my-class-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect untuk class card */
+.my-class-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Header kelas dengan gradient */
+.class-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #6200ee 0%, #03dac6 100%);
+  color: white;
+}
+
+/* Judul kelas */
+.class-header h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Deskripsi kelas */
+.class-header p {
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+/* Body kelas dengan info progress */
+.class-body {
+  padding: 1.5rem;
+}
+
+/* ========================================
+   PROGRESS BAR - BAR KEMAJUAN BELAJAR
+   ======================================== */
+
+/* Container progress bar */
+.progress-bar {
+  background: #e5e7eb;
+  height: 8px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* Fill progress bar */
+.progress-fill {
+  background: #6200ee;
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Text progress */
+.progress-text {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* Container tombol aksi kelas */
+.class-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Tombol aksi kelas */
+.class-actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* ========================================
+   ACTIVITY SECTION - AKTIVITAS TERBARU
+   ======================================== */
+
+/* Section aktivitas terbaru */
+.activity-section {
+  margin-bottom: 4rem;
+}
+
+/* Judul section aktivitas */
+.activity-section h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* Container list aktivitas */
+.activity-list {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Item aktivitas individual */
+.activity-item {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hilangkan border pada item terakhir */
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+/* Icon aktivitas */
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #6200ee;
+  flex-shrink: 0;
+}
+
+/* Konten aktivitas */
+.activity-content {
+  flex: 1;
+}
+
+/* Judul aktivitas */
+.activity-content h4 {
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+/* Deskripsi aktivitas */
+.activity-content p {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Waktu aktivitas */
+.activity-time {
+  color: #9ca3af;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* ========================================
+   RECOMMENDED SECTION - REKOMENDASI KELAS
+   ======================================== */
+
+/* Judul section rekomendasi */
+.recommended-section h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout untuk rekomendasi */
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Card rekomendasi kelas */
+.recommended-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect untuk recommended card */
+.recommended-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Judul rekomendasi */
+.recommended-card h3 {
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Deskripsi rekomendasi */
+.recommended-card p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================================
+   USER PROFILE - PROFIL USER DI HEADER
+   ======================================== */
+
+/* Container profil user */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #374151;
+}
+
+/* Foto profil user */
+.profile-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+/* ========================================
+   EMPTY STATE - KONDISI KOSONG
+   ======================================== */
+
+/* Container empty state */
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+}
+
+/* Judul empty state */
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #9ca3af;
+}
+
+/* Deskripsi empty state */
+.empty-state p {
+  margin-bottom: 2rem;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE DAN TABLET
+   ======================================== */
+
+/* Tablet styling */
+@media (max-width: 768px) {
+  /* Smaller welcome title */
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  /* 2 column stats grid */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Vertical stat card layout */
+  .stat-card {
+    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  /* Smaller stat icon */
+  .stat-icon {
+    font-size: 2.5rem;
+  }
+
+  /* Single column grids */
+  .classes-grid,
+  .recommended-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Vertical class actions */
+  .class-actions {
+    flex-direction: column;
+  }
+
+  /* Reduce activity item padding */
+  .activity-item {
+    padding: 1rem;
+  }
+
+  /* Hide user name on mobile */
+  .user-profile span {
+    display: none;
+  }
+}
+
+/* Mobile phone styling */
+@media (max-width: 480px) {
+  /* Reduce dashboard padding */
+  .dashboard-main {
+    padding: 100px 0 60px;
+  }
+
+  /* Single column stats */
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Further reduce stat card padding */
+  .stat-card {
+    padding: 1.25rem;
+  }
+
+  /* Reduce class padding */
+  .class-header,
+  .class-body {
+    padding: 1.25rem;
+  }
+
+  /* Reduce recommended card padding */
+  .recommended-card {
+    padding: 1.5rem;
+  }
+
+  /* Vertical activity item layout */
+  .activity-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  /* Activity time alignment */
+  .activity-time {
+    align-self: flex-end;
+  }
+}
+
+/* ========================================
+   LOADING STATES - STATUS LOADING
+   ======================================== */
+
+/* Loading card placeholder */
+.loading-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #6200ee;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+/* Keyframe untuk spinning animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   SUCCESS/ERROR MESSAGES - PESAN FEEDBACK
+   ======================================== */
+
+/* Base message styling */
+.message {
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* Success message */
+.message.success {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Error message */
+.message.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Info message */
+.message.info {
+  background: #cce7ff;
+  color: #004085;
+  border: 1px solid #b3d7ff;
+}

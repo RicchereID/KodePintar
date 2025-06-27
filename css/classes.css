@@ -1,0 +1,415 @@
+/* ========================================
+   CSS KHUSUS HALAMAN DAFTAR KELAS
+   ======================================== */
+
+/* ========================================
+   CLASSES HERO - HEADER HALAMAN KELAS
+   ======================================== */
+
+/* Hero section dengan gradient background */
+.classes-hero {
+  background: linear-gradient(135deg, #6200ee 0%, #03dac6 100%);
+  color: white;
+  padding: 120px 0 60px;
+  margin-top: 70px; /* Offset untuk fixed header */
+  text-align: center;
+}
+
+/* Judul utama halaman kelas */
+.classes-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Deskripsi halaman kelas */
+.classes-hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* ========================================
+   FILTER TABS - TOMBOL FILTER KELAS
+   ======================================== */
+
+/* Container untuk tombol filter */
+.filter-tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Tombol filter individual */
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Hover dan active state untuk filter button */
+.filter-btn:hover,
+.filter-btn.active {
+  background: white;
+  color: #6200ee;
+  border-color: white;
+}
+
+/* ========================================
+   CLASSES SECTION - DAFTAR KELAS
+   ======================================== */
+
+/* Section utama daftar kelas */
+.classes-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+/* Grid layout untuk card kelas */
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+/* Card kelas individual */
+.class-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect untuk class card */
+.class-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card yang featured (terpopuler) */
+.class-card.featured {
+  border: 3px solid #03dac6;
+}
+
+/* Badge "TERPOPULER" */
+.featured-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #03dac6;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* ========================================
+   CLASS IMAGE - GAMBAR KELAS
+   ======================================== */
+
+/* Container gambar kelas */
+.class-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+/* Gambar kelas - Cover full container */
+.class-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Badge level kelas di atas gambar */
+.class-level {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* ========================================
+   CLASS CONTENT - KONTEN KELAS
+   ======================================== */
+
+/* Container konten kelas */
+.class-content {
+  padding: 2rem;
+}
+
+/* Judul kelas */
+.class-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+/* Deskripsi kelas */
+.class-content p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* Container info kelas (durasi, siswa, rating) */
+.class-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Individual info item */
+.class-info span {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ========================================
+   CLASS PRICE - HARGA KELAS
+   ======================================== */
+
+/* Container harga kelas */
+.class-price {
+  margin-bottom: 1.5rem;
+}
+
+/* Harga lama - Dicoret */
+.price-old {
+  text-decoration: line-through;
+  color: #9ca3af;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Harga baru - Highlighted */
+.price-new {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6200ee;
+}
+
+/* ========================================
+   CLASS FEATURES - FITUR KELAS
+   ======================================== */
+
+/* List fitur kelas */
+.class-features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+/* Item fitur kelas */
+.class-features li {
+  padding: 0.5rem 0;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Hilangkan border pada item terakhir */
+.class-features li:last-child {
+  border-bottom: none;
+}
+
+/* ========================================
+   CLASS ACTIONS - TOMBOL AKSI KELAS
+   ======================================== */
+
+/* Container tombol aksi */
+.class-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Tombol aksi - Full width */
+.class-actions .btn {
+  flex: 1;
+  text-align: center;
+}
+
+/* ========================================
+   FAQ SECTION - PERTANYAAN UMUM
+   ======================================== */
+
+/* Section FAQ */
+.faq-section {
+  padding: 80px 0;
+  background: white;
+}
+
+/* Container FAQ - Centered dan limited width */
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Item FAQ individual */
+.faq-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/* Pertanyaan FAQ - Clickable */
+.faq-question {
+  padding: 1.5rem;
+  background: #f9fafb;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect untuk FAQ question */
+.faq-question:hover {
+  background: #f3f4f6;
+}
+
+/* Judul pertanyaan FAQ */
+.faq-question h3 {
+  font-size: 1.1rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* Toggle icon FAQ (+ / -) */
+.faq-toggle {
+  font-size: 1.5rem;
+  color: #6200ee;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate toggle icon when active */
+.faq-item.active .faq-toggle {
+  transform: rotate(45deg);
+}
+
+/* Jawaban FAQ - Collapsible */
+.faq-answer {
+  padding: 0 1.5rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Show FAQ answer when active */
+.faq-item.active .faq-answer {
+  padding: 1.5rem;
+  max-height: 200px;
+}
+
+/* Text jawaban FAQ */
+.faq-answer p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE DAN TABLET
+   ======================================== */
+
+/* Tablet styling */
+@media (max-width: 768px) {
+  /* Smaller hero title */
+  .classes-hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Smaller filter button gap */
+  .filter-tabs {
+    gap: 0.5rem;
+  }
+
+  /* Smaller filter buttons */
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Single column classes grid */
+  .classes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Vertical class info */
+  .class-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Vertical class actions */
+  .class-actions {
+    flex-direction: column;
+  }
+}
+
+/* Mobile phone styling */
+@media (max-width: 480px) {
+  /* Reduce hero padding */
+  .classes-hero {
+    padding: 100px 0 40px;
+  }
+
+  /* Reduce section padding */
+  .classes-section {
+    padding: 60px 0;
+  }
+
+  /* Reduce class content padding */
+  .class-content {
+    padding: 1.5rem;
+  }
+
+  /* Vertical filter tabs */
+  .filter-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Fixed width filter buttons */
+  .filter-btn {
+    width: 200px;
+  }
+}
+
+/* ========================================
+   ANIMATIONS - ANIMASI FILTER
+   ======================================== */
+
+/* Hide filtered items */
+.class-card.hidden {
+  display: none;
+}
+
+/* Show filtered items with animation */
+.class-card.show {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Keyframe untuk fade in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk - KodePintar</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">KodePintar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="classes.html">Kelas</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="register.html" class="btn-register">Daftar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container login-container">
+                <div class="auth-form">
+                    <h2>Masuk ke Akun Anda</h2>
+                    <p>Selamat datang kembali! Lanjutkan perjalanan coding Anda</p>
+                    
+                    <form id="loginForm" class="form">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                            <span class="error-message" id="loginEmailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" required>
+                            <span class="error-message" id="loginPasswordError"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe" name="rememberMe">
+                                <span class="checkmark"></span>
+                                Ingat saya
+                            </label>
+                            <a href="#" class="forgot-password">Lupa password?</a>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Masuk</button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>atau</span>
+                    </div>
+
+                    <div class="social-auth">
+                        <button class="btn btn-social btn-google">
+                            <span>🔍</span>
+                            Masuk dengan Google
+                        </button>
+                        <button class="btn btn-social btn-facebook">
+                            <span>📘</span>
+                            Masuk dengan Facebook
+                        </button>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-info">
+                    <h3>Akses Kelas Premium Anda</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <span class="benefit-icon">📚</span>
+                            <div>
+                                <h4>Materi Lengkap</h4>
+                                <p>Akses semua video pembelajaran dan materi</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">💬</span>
+                            <div>
+                                <h4>Diskusi dengan Mentor</h4>
+                                <p>Tanya jawab langsung dengan mentor</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">📊</span>
+                            <div>
+                                <h4>Progress Tracking</h4>
+                                <p>Pantau kemajuan belajar Anda</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">🎯</span>
+                            <div>
+                                <h4>Assignment & Quiz</h4>
+                                <p>Latihan soal dan tugas praktik</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KodePintar</h3>
+                    <p>Platform belajar coding terbaik untuk membangun karir di bidang teknologi.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 info@kodepintar.com</li>
+                        <li>📞 (021) 8765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KodePintar. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>

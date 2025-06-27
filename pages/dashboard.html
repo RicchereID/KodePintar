@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - KodePintar</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">KodePintar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="classes.html">Kelas</a></li>
+                    <li><a href="#" id="logoutBtn" class="btn-logout">Keluar</a></li>
+                </ul>
+                <div class="user-profile">
+                    <img src="../images/cowo.jpeg" alt="Profile" class="profile-img">
+                    <span id="userName">Loading...</span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-main">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h1>Selamat Datang, <span id="welcomeName">Student</span>!</h1>
+                <p>Lanjutkan perjalanan coding Anda hari ini</p>
+            </section>
+
+            <!-- Stats Cards -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-info">
+                            <h3 id="enrolledClasses">0</h3>
+                            <p>Kelas Terdaftar</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <h3 id="completedLessons">0</h3>
+                            <p>Pelajaran Selesai</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏆</div>
+                        <div class="stat-info">
+                            <h3 id="certificates">0</h3>
+                            <p>Sertifikat</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⏱️</div>
+                        <div class="stat-info">
+                            <h3 id="studyHours">0</h3>
+                            <p>Jam Belajar</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- My Classes Section -->
+            <section class="my-classes-section">
+                <h2>Kelas Saya</h2>
+                <div class="classes-grid" id="myClassesGrid">
+                    <!-- Classes will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Recent Activity -->
+            <section class="activity-section">
+                <h2>Aktivitas Terbaru</h2>
+                <div class="activity-list" id="activityList">
+                    <!-- Activities will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Recommended Classes -->
+            <section class="recommended-section">
+                <h2>Kelas Rekomendasi</h2>
+                <div class="recommended-grid">
+                    <div class="recommended-card">
+                        <h3>Advanced React</h3>
+                        <p>Tingkatkan skill React Anda dengan materi advanced</p>
+                        <a href="classes.html#frontend" class="btn btn-outline">Lihat Detail</a>
+                    </div>
+                    <div class="recommended-card">
+                        <h3>Node.js Masterclass</h3>
+                        <p>Pelajari backend development dengan Node.js</p>
+                        <a href="classes.html#backend" class="btn btn-outline">Lihat Detail</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Class Modal -->
+    <div id="classModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalClassTitle">Kelas</h2>
+            <div id="modalClassContent">
+                <!-- Class content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KodePintar</h3>
+                    <p>Platform belajar coding terbaik untuk membangun karir di bidang teknologi.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 info@kodepintar.com</li>
+                        <li>📞 (021) 8765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KodePintar. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

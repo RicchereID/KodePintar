@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - KodePintar</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="../index.html">KodePintar</a></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="classes.html">Kelas</a></li>
+                    <li><a href="about.html">Tentang</a></li>
+                    <li><a href="contact.html">Kontak</a></li>
+                    <li><a href="login.html" class="btn-login">Masuk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-form">
+                    <h2>Daftar Akun Baru</h2>
+                    <p>Mulai perjalanan coding Anda bersama KodePintar</p>
+                    
+                    <form id="registerForm" class="form">
+                        <div class="form-group">
+                            <label for="fullName">Nama Lengkap</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <span class="error-message" id="fullNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                            <span class="error-message" id="passwordError"></span>
+                            <small>Minimal 8 karakter, mengandung huruf dan angka</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Konfirmasi Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <span class="error-message" id="confirmPasswordError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="experience">Pengalaman Programming</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">Pilih pengalaman Anda</option>
+                                <option value="beginner">Pemula (Belum pernah coding)</option>
+                                <option value="basic">Dasar (Pernah belajar HTML/CSS)</option>
+                                <option value="intermediate">Menengah (Bisa JavaScript/PHP)</option>
+                                <option value="advanced">Lanjutan (Sudah pernah kerja sebagai developer)</option>
+                            </select>
+                            <span class="error-message" id="experienceError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interest">Minat Kelas</label>
+                            <select id="interest" name="interest" required>
+                                <option value="">Pilih kelas yang diminati</option>
+                                <option value="basic">Basic Programming</option>
+                                <option value="frontend">Frontend Development</option>
+                                <option value="backend">Backend Development</option>
+                                <option value="fullstack">Full Stack Development</option>
+                                <option value="mobile">Mobile App Development</option>
+                                <option value="data">Data Science & AI</option>
+                            </select>
+                            <span class="error-message" id="interestError"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                Saya setuju dengan <a href="#" target="_blank">Syarat dan Ketentuan</a> serta <a href="#" target="_blank">Kebijakan Privasi</a>
+                            </label>
+                            <span class="error-message" id="termsError"></span>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Saya ingin menerima informasi kelas dan promo terbaru via email
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Daftar Sekarang</button>
+                    </form>
+
+                    <div class="auth-divider">
+                        <span>atau</span>
+                    </div>
+
+                    <div class="social-auth">
+                        <button class="btn btn-social btn-google">
+                            <span>🔍</span>
+                            Daftar dengan Google
+                        </button>
+                        <button class="btn btn-social btn-facebook">
+                            <span>📘</span>
+                            Daftar dengan Facebook
+                        </button>
+                    </div>
+
+                    <div class="auth-footer">
+                        <p>Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+                    </div>
+                </div>
+
+                <div class="auth-info">
+                    <h3>Mengapa Bergabung dengan KodePintar?</h3>
+                    <ul class="benefits-list">
+                        <li>
+                            <span class="benefit-icon">🎓</span>
+                            <div>
+                                <h4>Kurikulum Terkini</h4>
+                                <p>Materi selalu update sesuai kebutuhan industri</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">👨‍💻</span>
+                            <div>
+                                <h4>Mentor Berpengalaman</h4>
+                                <p>Belajar dari developer profesional</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">💼</span>
+                            <div>
+                                <h4>Job Placement</h4>
+                                <p>Bantuan penempatan kerja di perusahaan partner</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">🏆</span>
+                            <div>
+                                <h4>Sertifikat Resmi</h4>
+                                <p>Sertifikat yang diakui industri teknologi</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="testimonial-mini">
+                        <p>"KodePintar mengubah hidup saya. Dari tidak tahu coding sama sekali, sekarang saya bekerja sebagai Full Stack Developer dengan gaji yang memuaskan."</p>
+                        <div class="testimonial-author">
+                            <img src="../images/cowo.jpeg" alt="Alumni">
+                            <div>
+                                <strong>Ahmad Rizki</strong>
+                                <span>Full Stack Developer di Tokopedia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KodePintar</h3>
+                    <p>Platform belajar coding terbaik untuk membangun karir di bidang teknologi.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <ul>
+                        <li>📧 info@kodepintar.com</li>
+                        <li>📞 (021) 8765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KodePintar. Semua hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
