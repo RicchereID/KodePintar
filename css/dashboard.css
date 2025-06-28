@@ -517,3 +517,101 @@
   color: #004085;
   border: 1px solid #b3d7ff;
 }
+
+/* ========================================
+   VIDEO MATERIALS - STYLING VIDEO MATERI
+   ======================================== */
+
+/* Material item dengan video */
+.material-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #6200ee;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect material item */
+.material-item:hover {
+  transform: translateX(5px);
+}
+
+/* Material icon */
+.material-item .material-icon {
+  font-size: 2rem;
+  color: #6200ee;
+  flex-shrink: 0;
+}
+
+/* Material info container */
+.material-info {
+  flex: 1;
+}
+
+/* Material title */
+.material-info h4 {
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Material description */
+.material-info p {
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Material duration and type */
+.material-duration,
+.material-type {
+  display: inline-block;
+  background: #e5e7eb;
+  color: #374151;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Video type styling */
+.material-type {
+  background: #6200ee;
+  color: white;
+}
+
+/* YouTube container in dashboard */
+.dashboard-main .youtube-container {
+  margin-bottom: 2rem;
+}
+
+/* Video player container in dashboard */
+.video-player-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive material items */
+@media (max-width: 768px) {
+  .material-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .material-info {
+    text-align: center;
+  }
+
+  .material-duration,
+  .material-type {
+    display: block;
+    margin: 0.25rem auto;
+    width: fit-content;
+  }
+}

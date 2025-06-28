@@ -2,7 +2,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeAuthForms()
-  initializeSocialAuth()
 })
 
 // Initialize authentication forms
@@ -349,26 +348,6 @@ function processLogin() {
   }, 1500)
 }
 
-// Initialize social authentication
-function initializeSocialAuth() {
-  const googleBtn = document.querySelector(".btn-google")
-  const facebookBtn = document.querySelector(".btn-facebook")
-
-  if (googleBtn) {
-    googleBtn.addEventListener("click", (e) => {
-      e.preventDefault()
-      showNotification("Fitur login dengan Google akan segera tersedia", "info")
-    })
-  }
-
-  if (facebookBtn) {
-    facebookBtn.addEventListener("click", (e) => {
-      e.preventDefault()
-      showNotification("Fitur login dengan Facebook akan segera tersedia", "info")
-    })
-  }
-}
-
 // Declare validateEmail function
 function validateEmail(email) {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -378,7 +357,12 @@ function validateEmail(email) {
 // Validasi nomor telepon Indonesia - format yang lebih fleksibel
 function validatePhone(phone) {
   // Hapus semua spasi, tanda hubung, dan karakter non-digit kecuali +
-  const cleanPhone = phone.replace(/[\s\-$$$$]/g, "")
+  const cleanPhone = phone.replace(/[\s\-()]/g, "")
+
+  // Pattern untuk nomor Indonesia:
+  // - Dimulai dengan +62, 62, atau 0
+  // - Diikuti 8-12 digit
+  // - Total panjang 10-15 karakter
   const patterns = [
     /^\+62[0-9]{8,12}$/, // +62812345678
     /^62[0-9]{8,12}$/, // 62812345678
@@ -399,9 +383,44 @@ function showNotification(message, type) {
   const notification = document.createElement("div")
   notification.classList.add("notification", type)
   notification.textContent = message
+
+  // Styling notifikasi
+  notification.style.cssText = `
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  `
+
+  // Set warna berdasarkan type
+  if (type === "success") {
+    notification.style.background = "#10b981"
+  } else if (type === "error") {
+    notification.style.background = "#ef4444"
+  } else {
+    notification.style.background = "#3b82f6"
+  }
+
   document.body.appendChild(notification)
 
+  // Animasi masuk
   setTimeout(() => {
-    document.body.removeChild(notification)
+    notification.style.transform = "translateX(0)"
+  }, 100)
+
+  // Hapus notifikasi setelah 3 detik
+  setTimeout(() => {
+    notification.style.transform = "translateX(100%)"
+    setTimeout(() => {
+      if (document.body.contains(notification)) {
+        document.body.removeChild(notification)
+      }
+    }, 300)
   }, 3000)
 }

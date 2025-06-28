@@ -129,19 +129,46 @@ function showPreview(className, modal, modalTitle, modalBody) {
   modalTitle.textContent = `Preview: ${classData.title}`
   modalBody.innerHTML = `
         <div class="preview-content">
-            <h3>Apa yang akan Anda pelajari:</h3>
+            <div class="video-preview">
+                <h3>🎥 Video Preview Kelas:</h3>
+                <div class="youtube-container">
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/${classData.previewVideo}?rel=0&modestbranding=1" 
+                        title="Preview ${classData.title}"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+            
+            <h3>📚 Apa yang akan Anda pelajari:</h3>
             <ul class="preview-topics">
                 ${classData.topics.map((topic) => `<li>✓ ${topic}</li>`).join("")}
             </ul>
             
-            <h3>Video Preview:</h3>
-            <div class="video-preview">
-                <div class="video-placeholder">
-                    <p>🎥 Video preview akan tersedia setelah Anda mendaftar</p>
-                </div>
+            <h3>🎬 Contoh Materi Video:</h3>
+            <div class="materials-preview">
+                ${classData.materials
+                  .slice(0, 3)
+                  .map(
+                    (material) => `
+                    <div class="material-preview-item">
+                        <div class="material-icon">🎥</div>
+                        <div class="material-info">
+                            <h4>${material.title}</h4>
+                            <p>${material.description}</p>
+                            <span class="material-duration">⏱️ ${material.duration}</span>
+                        </div>
+                    </div>
+                `,
+                  )
+                  .join("")}
             </div>
             
-            <h3>Mentor:</h3>
+            <h3>👨‍🏫 Mentor:</h3>
             <div class="mentor-info">
                 <p><strong>${classData.mentor}</strong></p>
                 <p>${classData.mentorBio}</p>
@@ -179,6 +206,33 @@ function getClassData(className) {
       ],
       mentor: "Budi Santoso",
       mentorBio: "Senior Frontend Developer di Gojek dengan 5+ tahun pengalaman",
+      previewVideo: "UB1O30fR-EE", // HTML Crash Course - Traversy Media
+      materials: [
+        {
+          id: "html-basics",
+          title: "HTML Fundamentals",
+          type: "video",
+          videoId: "UB1O30fR-EE", // HTML Crash Course - Traversy Media
+          duration: "1 jam 15 menit",
+          description: "Pelajari dasar-dasar HTML dari nol",
+        },
+        {
+          id: "css-basics",
+          title: "CSS Fundamentals",
+          type: "video",
+          videoId: "yfoY53QXEnI", // CSS Crash Course - Traversy Media
+          duration: "1 jam 30 menit",
+          description: "Styling website dengan CSS",
+        },
+        {
+          id: "js-basics",
+          title: "JavaScript Basics",
+          type: "video",
+          videoId: "hdI2bqOjy3c", // JavaScript Crash Course - Traversy Media
+          duration: "1 jam 45 menit",
+          description: "Pemrograman JavaScript untuk pemula",
+        },
+      ],
     },
     frontend: {
       title: "Frontend Development",
@@ -192,6 +246,33 @@ function getClassData(className) {
       ],
       mentor: "Sarah Wijaya",
       mentorBio: "Tech Lead di Tokopedia, spesialis React dan Vue.js",
+      previewVideo: "Ke90Tje7VS0", // React JS Crash Course - Traversy Media
+      materials: [
+        {
+          id: "react-intro",
+          title: "Introduction to React",
+          type: "video",
+          videoId: "Ke90Tje7VS0", // React JS Crash Course - Traversy Media
+          duration: "1 jam 48 menit",
+          description: "Pengenalan React.js untuk pemula",
+        },
+        {
+          id: "react-hooks",
+          title: "React Hooks Deep Dive",
+          type: "video",
+          videoId: "O6P86uwfdR0", // React Hooks - Web Dev Simplified
+          duration: "58 menit",
+          description: "Memahami React Hooks secara mendalam",
+        },
+        {
+          id: "nextjs-intro",
+          title: "Next.js Framework",
+          type: "video",
+          videoId: "mTz0GXj8NN0", // Next.js Crash Course - Traversy Media
+          duration: "1 jam 9 menit",
+          description: "Framework React untuk production",
+        },
+      ],
     },
     backend: {
       title: "Backend Development",
@@ -205,6 +286,33 @@ function getClassData(className) {
       ],
       mentor: "Ahmad Rizki",
       mentorBio: "Backend Engineer di Shopee, expert dalam microservices",
+      previewVideo: "fBNz5xF-Kx4", // Node.js Crash Course - Traversy Media
+      materials: [
+        {
+          id: "nodejs-intro",
+          title: "Node.js Fundamentals",
+          type: "video",
+          videoId: "fBNz5xF-Kx4", // Node.js Crash Course - Traversy Media
+          duration: "1 jam 30 menit",
+          description: "Dasar-dasar Node.js dan server-side JavaScript",
+        },
+        {
+          id: "express-api",
+          title: "Express.js & REST API",
+          type: "video",
+          videoId: "L72fhGm1tfE", // Express.js Crash Course - Traversy Media
+          duration: "1 jam 15 menit",
+          description: "Membuat REST API dengan Express.js",
+        },
+        {
+          id: "mongodb-intro",
+          title: "MongoDB Database",
+          type: "video",
+          videoId: "-56x56UppqQ", // MongoDB Crash Course - Traversy Media
+          duration: "45 menit",
+          description: "Database NoSQL dengan MongoDB",
+        },
+      ],
     },
     fullstack: {
       title: "Full Stack Development",
@@ -218,6 +326,25 @@ function getClassData(className) {
       ],
       mentor: "Ricky Tri Setiawan",
       mentorBio: "Full Stack Architect dengan 8+ tahun pengalaman",
+      previewVideo: "7CqJlxBYj-M", // MERN Stack Tutorial - Traversy Media
+      materials: [
+        {
+          id: "mern-intro",
+          title: "MERN Stack Introduction",
+          type: "video",
+          videoId: "7CqJlxBYj-M", // MERN Stack Tutorial - Traversy Media
+          duration: "2 jam 30 menit",
+          description: "Membangun aplikasi full stack dengan MERN",
+        },
+        {
+          id: "devops-basics",
+          title: "DevOps Fundamentals",
+          type: "video",
+          videoId: "Xrgk023l4lI", // DevOps Explained - TechWorld with Nana
+          duration: "1 jam 20 menit",
+          description: "Pengenalan DevOps dan CI/CD",
+        },
+      ],
     },
     mobile: {
       title: "Mobile App Development",
@@ -231,6 +358,25 @@ function getClassData(className) {
       ],
       mentor: "Dewi Lestari",
       mentorBio: "Mobile Developer di Traveloka, expert React Native",
+      previewVideo: "0-S5a0eXPoc", // React Native Crash Course - Traversy Media
+      materials: [
+        {
+          id: "react-native-intro",
+          title: "React Native Basics",
+          type: "video",
+          videoId: "0-S5a0eXPoc", // React Native Crash Course - Traversy Media
+          duration: "2 jam 15 menit",
+          description: "Membuat aplikasi mobile dengan React Native",
+        },
+        {
+          id: "flutter-intro",
+          title: "Flutter Development",
+          type: "video",
+          videoId: "1ukSR1GRtMU", // Flutter Crash Course - Net Ninja
+          duration: "1 jam 37 menit",
+          description: "Cross-platform development dengan Flutter",
+        },
+      ],
     },
     data: {
       title: "Data Science & AI",
@@ -244,6 +390,25 @@ function getClassData(className) {
       ],
       mentor: "Dr. Andi Pratama",
       mentorBio: "Data Scientist di Grab, PhD in Computer Science",
+      previewVideo: "LHBE6Q9XlzI", // Python for Data Science - freeCodeCamp
+      materials: [
+        {
+          id: "python-data-science",
+          title: "Python for Data Science",
+          type: "video",
+          videoId: "LHBE6Q9XlzI", // Python Data Science Tutorial - freeCodeCamp
+          duration: "2 jam 45 menit",
+          description: "Python untuk analisis data dan machine learning",
+        },
+        {
+          id: "machine-learning",
+          title: "Machine Learning Basics",
+          type: "video",
+          videoId: "ukzFI9rgwfU", // Machine Learning Explained - Zach Star
+          duration: "1 jam 55 menit",
+          description: "Pengenalan algoritma machine learning",
+        },
+      ],
     },
   }
 

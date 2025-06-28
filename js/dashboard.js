@@ -280,24 +280,25 @@ function createContinueLearningContent(classData) {
 
 // Create materials content
 function createMaterialsContent(classData) {
-  const materials = generateMaterials(classData.id)
+  const materials = getClassMaterials(classData.id)
 
   return `
         <div class="materials-content">
-            <h3>Materi Pembelajaran:</h3>
+            <h3>📚 Materi Pembelajaran:</h3>
             <div class="materials-list">
                 ${materials
                   .map(
                     (material) => `
                     <div class="material-item">
-                        <div class="material-icon">${material.icon}</div>
+                        <div class="material-icon">${material.type === "video" ? "🎥" : "📄"}</div>
                         <div class="material-info">
                             <h4>${material.title}</h4>
                             <p>${material.description}</p>
-                            <span class="material-type">${material.type}</span>
+                            <span class="material-duration">⏱️ ${material.duration}</span>
+                            <span class="material-type">${material.type === "video" ? "Video" : "Dokumen"}</span>
                         </div>
-                        <button class="btn btn-outline btn-sm" onclick="openMaterial('${material.id}')">
-                            Buka
+                        <button class="btn btn-outline btn-sm" onclick="openMaterial('${material.id}', '${material.type}', '${material.videoId || ""}')">
+                            ${material.type === "video" ? "Tonton" : "Buka"}
                         </button>
                     </div>
                 `,
@@ -306,6 +307,81 @@ function createMaterialsContent(classData) {
             </div>
         </div>
     `
+}
+
+// Get materials for specific class
+function getClassMaterials(classId) {
+  const classData = getClassesData()[classId]
+
+  if (!classData) return []
+
+  // Return sample materials with YouTube videos
+  const materialsData = {
+    basic: [
+      {
+        id: "html-basics",
+        title: "HTML Fundamentals",
+        description: "Pelajari dasar-dasar HTML dari nol",
+        type: "video",
+        videoId: "UB1O30fR-EE", // HTML Crash Course - Traversy Media
+        duration: "1 jam 15 menit",
+      },
+      {
+        id: "css-basics",
+        title: "CSS Fundamentals",
+        description: "Styling website dengan CSS",
+        type: "video",
+        videoId: "yfoY53QXEnI", // CSS Crash Course - Traversy Media
+        duration: "1 jam 30 menit",
+      },
+      {
+        id: "js-basics",
+        title: "JavaScript Basics",
+        description: "Pemrograman JavaScript untuk pemula",
+        type: "video",
+        videoId: "hdI2bqOjy3c", // JavaScript Crash Course - Traversy Media
+        duration: "1 jam 45 menit",
+      },
+    ],
+    frontend: [
+      {
+        id: "react-intro",
+        title: "Introduction to React",
+        description: "Pengenalan React.js untuk pemula",
+        type: "video",
+        videoId: "Ke90Tje7VS0", // React JS Crash Course - Traversy Media
+        duration: "1 jam 48 menit",
+      },
+      {
+        id: "react-hooks",
+        title: "React Hooks Deep Dive",
+        description: "Memahami React Hooks secara mendalam",
+        type: "video",
+        videoId: "O6P86uwfdR0", // React Hooks - Web Dev Simplified
+        duration: "58 menit",
+      },
+    ],
+    backend: [
+      {
+        id: "nodejs-intro",
+        title: "Node.js Fundamentals",
+        description: "Dasar-dasar Node.js dan server-side JavaScript",
+        type: "video",
+        videoId: "fBNz5xF-Kx4", // Node.js Crash Course - Traversy Media
+        duration: "1 jam 30 menit",
+      },
+      {
+        id: "express-api",
+        title: "Express.js & REST API",
+        description: "Membuat REST API dengan Express.js",
+        type: "video",
+        videoId: "L72fhGm1tfE", // Express.js Crash Course - Traversy Media
+        duration: "1 jam 15 menit",
+      },
+    ],
+  }
+
+  return materialsData[classId] || materialsData.basic
 }
 
 // Generate lessons for demo
@@ -469,9 +545,59 @@ window.downloadCertificate = () => {
   closeModal()
 }
 
-window.openMaterial = (materialId) => {
-  showNotification("Membuka materi pembelajaran...", "info")
+window.openMaterial = (materialId, type, videoId) => {
+  if (type === "video" && videoId) {
+    openVideoModal(materialId, videoId)
+  } else {
+    showNotification("Membuka materi pembelajaran...", "info")
+    closeModal()
+  }
+}
+
+// Open video modal with YouTube player
+function openVideoModal(materialId, videoId) {
+  const modal = document.getElementById("classModal")
+  const modalTitle = document.getElementById("modalClassTitle")
+  const modalContent = document.getElementById("modalClassContent")
+
+  modalTitle.textContent = "Video Pembelajaran"
+  modalContent.innerHTML = `
+    <div class="video-player-container">
+      <div class="youtube-container">
+        <iframe 
+          width="100%" 
+          height="400" 
+          src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&autoplay=1" 
+          title="Video Pembelajaran"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="video-controls">
+        <button class="btn btn-primary" onclick="markAsCompleted('${materialId}')">
+          ✅ Tandai Selesai
+        </button>
+        <button class="btn btn-outline" onclick="closeModal()">
+          Tutup
+        </button>
+      </div>
+    </div>
+  `
+}
+
+// Mark lesson as completed
+window.markAsCompleted = (materialId) => {
+  const completedLessons = Number.parseInt(localStorage.getItem("completedLessons") || "0")
+  localStorage.setItem("completedLessons", (completedLessons + 1).toString())
+
+  showNotification("Pelajaran berhasil diselesaikan! 🎉", "success")
   closeModal()
+
+  // Refresh dashboard stats
+  setTimeout(() => {
+    location.reload()
+  }, 1500)
 }
 
 // Declare closeModal function
